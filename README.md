@@ -30,12 +30,7 @@ Application keeps crashing      Application Issue        2
 
 ## Things to consider
 
-Evaluation Metrics: Precision, recall, F1-score, confusion matrix
-Deployment: FastAPI, Flask, Docker (optional)
-LLMs vs Traditional ML: If the dataset is large, LLMs can enhance contextual understanding.
+* Evaluation Metrics: Precision, recall, F1-score, confusion matrix
+* Deployment: FastAPI, Flask, Docker (optional)
+* LLMs vs Traditional ML: If the dataset is large, LLMs can enhance contextual understanding.
 
-## Contributors
-
-* ALan
-* Jonathan
-* Suhail
