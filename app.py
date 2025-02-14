@@ -5,7 +5,7 @@ import joblib
 
 # Loading model and vectorizer
 model = joblib.load("classifier.pkl")
-vectorizer = joblib.load("vectorizer.pkl")
+vectoriser = joblib.load("vectorizer.pkl")
 
 # Defining category based on the source (incidents.csv)
 category_mapping = {
@@ -27,7 +27,7 @@ class Incident(BaseModel):
 @app.post("/predict/")
 async def predict(incident: Incident):
     # Transforming input with vectorizer
-    transformed_description = vectorizer.transform([incident.description])
+    transformed_description = vectoriser.transform([incident.description])
     # Predict the category
     prediction = model.predict(transformed_description)[0]
     # Mapping prediction to category
