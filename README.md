@@ -25,7 +25,7 @@ Application keeps crashing      Application Issue        2
 ```
   * Next step is to split the dataset into training set (80%) and testing data (20%). This is to check if the model is accurate or not. [more here](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html). If we push all the data into the model, it will just memorise it, testing model is used to quiz the model. 
   * Next step is to comvert incident Description into a numerical format, and uses TF-IDF (Term Frequency-Inverse Document Frequency) to find important words. After conversion, it could be in a vector format `[0.2, 0.5, 0.1, 0.0, ...]` Common words like is, are get lower score wheras words like server, database gets higher score. [more here](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
-  * 
+  * Lastly, we save the data in `pkl` format so that we don't have to process the data everytime. 
 
 
 ## Things to consider
