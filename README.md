@@ -33,7 +33,22 @@ Application keeps crashing      Application Issue        2
 
 2. Training model `trainmodel.py`
 * After the data has been processed, we have `incident descriptions`, converted into `TD-IDF vectors`. We also have corresponding labels, we now need to train a model so that it can learn patterns and predict the category of any new incidents.
-*   
+* In the first step, we load vectorizer as well as the numerical dataset which contains the following: 
+- X_train_tfidf -> Training data
+- X_test_tfidf -> Testing data
+- y_train -> Training labels
+- y_test -> Testing labels
+* We then initialise Naive Bayes model, and train the model with `model.fit(X_train_tfidf, y_train)` [more about the model](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html)
+* Next step is to use the trained model to predict the category for `X_test_tfidf` (Note that this is done on test data)
+* It compares predicitons (y_pred) with actual labels (y_test)
+* It might print precisions, recalls, F1-score [more here](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html)
+* We then save the trained model as `classifier.pkl` so that we don't have to train it again. This is used to predict categories for new incident tickets.
+* This was the outcome after training the model 
+![alt text](image.png)
+* What they mean ?
+- precision: How many predicted categories were correct ?
+- recall: How many categories were predicted correctly ? 
+- F1-score: A balance between precision & recall. 
 
 ## Things to consider
 
