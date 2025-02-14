@@ -11,7 +11,7 @@ The model will be trained on curated, tagged data and evaluated using [Scikit-Le
 
 ## High Level Approach
 
-1. Data Collection & Preprocessing (For this project we create dummy data (IT operations))
+1. Data Collection & Preprocessing (For this project we create dummy data (IT operations)) `dataprocess.py`
    *  For simplicity, created a incident file (incidents.csv), Description and Category
    *  Using Pandas to load the csv into a table, seems to be a popular choice for Data folks. It's also called Pandas Dataframe
    * `Machine learning models only understand numbers.` and I m converting `Category` field into numbers, this process is also called (Label Encoding). There is only 1 label field in a simple dataset like this. 
