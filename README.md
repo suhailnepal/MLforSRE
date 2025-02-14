@@ -50,6 +50,18 @@ Application keeps crashing      Application Issue        2
 - recall: How many categories were predicted correctly ? 
 - F1-score: A balance between precision & recall. 
 
+3. Testing model `testmodel.py`
+
+* In this case, I wanted to manually test the model to check how it works. 
+* First step is to load the model and vectorizer
+* I defined category mapping based on the source input file
+* Tested the model, with a text, I delibaretly used the term `Computer` here to check what it can predict. 
+* I then got the label, and mapped it to my category. 
+* This is the output I got, which was expected, it is a server issue for sure.
+![alt text](image-1.png)
+
+
+
 ## Things to consider
 
 * Evaluation Metrics: Precision, recall, F1-score, confusion matrix
