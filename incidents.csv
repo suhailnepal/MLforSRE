@@ -1,0 +1,6 @@
+description,category
+"Cannot connect to VPN","Network Issue"
+"Production server is down","Server Down"
+"Application crashes frequently","Application Crash"
+"Multiple failed login attempts","Security Alert"
+"Website is extremely slow","Performance Degradation"
