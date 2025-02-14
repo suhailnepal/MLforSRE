@@ -11,7 +11,7 @@ The model will be trained on curated, tagged data and evaluated using [Scikit-Le
 
 ## High Level Approach
 
-1. Data Collection & Preprocessing (For this project we create dummy data (IT operations)) `dataprocess.py`
+1. Data Collection & Preprocessing (For this project we create dummy data (IT operations)) [`dataprocess.py`](dataprocess.py)
    *  For simplicity, created a incident file (incidents.csv), Description and Category
    *  Using Pandas to load the csv into a table, seems to be a popular choice for Data folks. It's also called Pandas Dataframe
    * `Machine learning models only understand numbers.` and I m converting `Category` field into numbers, this process is also called (Label Encoding). There is only 1 label field in a simple dataset like this. 
@@ -31,7 +31,7 @@ Application keeps crashing      Application Issue        2
   * Vectorizer.pkl is used to convert text to numbers, this is needed to tranform new text when making prediction later. 
   * Processes_data.pkl stores converted training/test data to avoid re-processing every time.  
 
-2. Training model `trainmodel.py`
+2. Training model [`trainmodel.py`](trainmodel.py)
 * After the data has been processed, we have `incident descriptions`, converted into `TD-IDF vectors`. We also have corresponding labels, we now need to train a model so that it can learn patterns and predict the category of any new incidents.
 * In the first step, we load vectorizer as well as the numerical dataset which contains the following: 
 - X_train_tfidf -> Training data
@@ -50,7 +50,7 @@ Application keeps crashing      Application Issue        2
 - recall: How many categories were predicted correctly ? 
 - F1-score: A balance between precision & recall. 
 
-3. Testing model `testmodel.py`
+3. Testing model [`testmodel.py`](testmodel.py)
 
 * In this case, I wanted to manually test the model to check how it works. 
 * First step is to load the model and vectorizer
@@ -58,13 +58,10 @@ Application keeps crashing      Application Issue        2
 * Tested the model, with a text, I delibaretly used the term `Computer` here to check what it can predict. 
 * I then got the label, and mapped it to my category. 
 * This is the output I got, which was expected, it is a server issue for sure.
-![alt text](image-1.png)
+* ![alt text](image-1.png)
 
+## Things to consider/next steps
 
-
-## Things to consider
-
-* Evaluation Metrics: Precision, recall, F1-score, confusion matrix
 * Deployment: FastAPI, Flask, Docker (optional)
 * LLMs vs Traditional ML: If the dataset is large, LLMs can enhance contextual understanding.
 
