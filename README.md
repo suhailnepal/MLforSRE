@@ -6,7 +6,7 @@ POC for ML training for IT Operations
 
 The goal of this project is to build a machine learning classifier that can categorise IT operations tickets based on historical incident data. 
 
-The model will be trained on curated, tagged data and evaluated using [Scikit-Learn](https://scikit-learn.org/stable/) which is ML algorithm written in Python. 
+The model will be trained on curated, labeled data and evaluated using [Scikit-Learn](https://scikit-learn.org/stable/) which is a popular Machine Learning library written in Python. 
 
 
 ## High Level Approach
